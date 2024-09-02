@@ -320,12 +320,34 @@ button {
 /** banner section **/
 
 .banner_main {
-     background: url(../images/banner.jpg);
-     padding: 310px 0px 0px 0px;
-     background-size: 100% 100%;
-     background-repeat: no-repeat;
+     background: url(../images/banner.jpg) no-repeat center center;
+     background-size: cover; /* This ensures the image scales and covers the entire section */
+     padding-top: 310px;
      min-height: 914px;
+     position: relative;
 }
+
+@media (max-width: 767px) {
+     .banner_main {
+         padding-top: 200px; /* Adjust the padding for smaller screens */
+         min-height: 500px; /* Reduce the minimum height for mobile devices */
+         background-size: cover; /* Ensure the image covers the background on small screens */
+     }
+ 
+     .banner_main h1 {
+         font-size: 48px; /* Adjust the font size for smaller screens */
+         line-height: 50px;
+         letter-spacing: 20px; /* Adjust letter spacing */
+     }
+ 
+     .text-bg h1 {
+         font-size: 48px;
+         line-height: 50px;
+         padding-bottom: 20px;
+     }
+ }
+ 
+
 
 .text-bg {
      text-align: center;
